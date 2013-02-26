@@ -8,6 +8,7 @@
 
 #import "PhotoGridViewController.h"
 #import "PhotoGridCell.h"
+#import "ImageModel.h"
 
 @interface PhotoGridViewController ()
 
@@ -16,6 +17,7 @@
 @implementation PhotoGridViewController
 
 @synthesize data = _data;
+@synthesize thumbLoaders = _thumbLoaders;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -61,21 +63,116 @@
 {
     static NSString *CellIdentifier = @"Cell";
     
-    NSDictionary *image = (NSDictionary *)[_data objectAtIndex:[indexPath row]];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@", @"http://", [image objectForKey:@"url"], @"_thumb_160"]];
-	NSData *data = [NSData dataWithContentsOfURL:url];
+	PhotoGridCell *cell;
     
-    PhotoGridCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-	cell.imageView.image = [UIImage imageWithData:data];
-    cell.textLabel.text = [image objectForKey:@"caption"];
+	if ([_data count] == 0 && indexPath.row == 0)
+	{
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:0];
+		cell.textLabel.text = @"Loading…";
+		
+		return cell;
+    }
+    
+    ImageModel *model = [_data objectAtIndex:[indexPath row]];
+    
+    cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    cell.textLabel.hidden = !model.caption.length;
+    
+    if (!cell.textLabel.hidden)
+    {
+        cell.textLabel.text = model.caption;
+    }
+    
+    // Only load cached images; defer new downloads until scrolling ends
+    if (!model.thumb)
+    {
+        if (collectionView.dragging == NO && collectionView.decelerating == NO)
+        {
+            [self loadThumb:model forIndexPath:indexPath];
+        }
+        
+        // if a download is deferred or in progress, use a placeholder image
+        UIImage *image = [UIImage imageNamed:@"ThumbPlaceholder.png"];
+        
+        cell.imageView.image = image;
+    } else
+    {
+        cell.imageView.image = model.thumb;
+    }
     
     return cell;
+}
+
+- (void)loadThumb:(ImageModel *)model forIndexPath:(NSIndexPath *)indexPath
+{
+    ImageLoader *thumbLoader = [_thumbLoaders objectForKey:indexPath];
+    
+    if (thumbLoader == nil)
+    {
+        thumbLoader = [[ImageLoader alloc] init];
+        thumbLoader.indexPath = indexPath;
+        thumbLoader.delegate = self;
+        [_thumbLoaders setObject:thumbLoader forKey:indexPath];
+        [thumbLoader start:[NSString stringWithFormat:@"%@%@%@", @"http://", model.url, @"_thumb_160"]];
+    }
+}
+
+- (void)imageDidLoad:(UIImage *)image forIndexPath:(NSIndexPath *)indexPath
+{
+    if (image)
+    {
+        ImageModel *model = [_data objectAtIndex:[indexPath row]];
+        model.thumb = image;
+        
+        // get cell from index path and typecast this to PhotoGridCell
+        PhotoGridCell *cell = (PhotoGridCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+        cell.imageView.image = model.thumb;
+    }
+    
+    // Remove the thumbLoader from the in thumbloaders collection.
+    // This will result in it being deallocated.
+    [_thumbLoaders removeObjectForKey:indexPath];
+}
+
+- (void)loadThumbsForOnscreenRows
+{
+    if ([_data count] > 0)
+    {
+        NSArray *visiblePaths = [self.collectionView indexPathsForVisibleItems];
+        
+        for (NSIndexPath *indexPath in visiblePaths)
+        {
+            ImageModel *model = [_data objectAtIndex:indexPath.row];
+            
+            // only load thumbs that are not chached yet.
+            if (!model.thumb)
+            {
+                [self loadThumb:model forIndexPath:indexPath];
+            }
+        }
+    }
+}
+
+// Load images for all onscreen rows when scrolling is finished
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    if (!decelerate)
+	{
+        [self loadThumbsForOnscreenRows];
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self loadThumbsForOnscreenRows];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    self.collectionView = nil;
+    self.data = nil;
 }
 
 @end

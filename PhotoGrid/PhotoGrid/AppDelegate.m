@@ -11,14 +11,23 @@
 @implementation AppDelegate
 
 @synthesize dataController = _dataController;
+@synthesize viewController = _viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     _dataController = [DataController instance];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Create view and add data
+    _viewController = [[PhotoGridViewController alloc] initWithNibName:@"PhotoGridViewController" bundle:nil];
+    [_viewController setData: _dataController.images];
+    self.window.rootViewController = _viewController;
+    [self.window makeKeyAndVisible];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(noDataHandler:) name:@"noData" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotDataHandler:) name:@"gotData" object:nil];
-    [_dataController getData];
-    
+    [_dataController getImages];
+        
     return YES;
 }
 
@@ -29,14 +38,10 @@
 
 - (void)gotDataHandler:(NSNotification *)notification
 {
-    NSLog(@"Got data");
+    NSLog(@"Got data");    
     
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.viewController = [[PhotoGridViewController alloc] initWithNibName:@"PhotoGridViewController" bundle:nil];
-    [self.viewController setData: _dataController.data];
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
+    // reload the data on the collectionview
+    [_viewController.collectionView reloadData];
 }
 
 

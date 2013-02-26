@@ -21,6 +21,11 @@
 		61BAE0C616B83E6300CDAE40 /* PhotoGridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61BAE0C416B83E6300CDAE40 /* PhotoGridViewController.xib */; };
 		61BAE0CE16B83FF100CDAE40 /* PhotoGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61BAE0CD16B83FF100CDAE40 /* PhotoGridCell.xib */; };
 		61BAE0D116B8404F00CDAE40 /* PhotoGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BAE0D016B8404F00CDAE40 /* PhotoGridCell.m */; };
+		61CD7AC016DCE28C003F8B5C /* DataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CD7AB916DCE28C003F8B5C /* DataParser.m */; };
+		61CD7AC116DCE28C003F8B5C /* ImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CD7ABB16DCE28C003F8B5C /* ImageLoader.m */; };
+		61CD7AC216DCE28C003F8B5C /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CD7ABD16DCE28C003F8B5C /* ImageModel.m */; };
+		61CD7AC316DCE28C003F8B5C /* ImagePlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7ABE16DCE28C003F8B5C /* ImagePlaceholder.png */; };
+		61CD7AC416DCE28C003F8B5C /* ThumbPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7ABF16DCE28C003F8B5C /* ThumbPlaceholder.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +50,14 @@
 		61BAE0CD16B83FF100CDAE40 /* PhotoGridCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoGridCell.xib; sourceTree = "<group>"; };
 		61BAE0CF16B8404F00CDAE40 /* PhotoGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoGridCell.h; sourceTree = "<group>"; };
 		61BAE0D016B8404F00CDAE40 /* PhotoGridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoGridCell.m; sourceTree = "<group>"; };
+		61CD7AB816DCE28C003F8B5C /* DataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataParser.h; sourceTree = "<group>"; };
+		61CD7AB916DCE28C003F8B5C /* DataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataParser.m; sourceTree = "<group>"; };
+		61CD7ABA16DCE28C003F8B5C /* ImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLoader.h; sourceTree = "<group>"; };
+		61CD7ABB16DCE28C003F8B5C /* ImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLoader.m; sourceTree = "<group>"; };
+		61CD7ABC16DCE28C003F8B5C /* ImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
+		61CD7ABD16DCE28C003F8B5C /* ImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
+		61CD7ABE16DCE28C003F8B5C /* ImagePlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ImagePlaceholder.png; sourceTree = "<group>"; };
+		61CD7ABF16DCE28C003F8B5C /* ThumbPlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThumbPlaceholder.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,17 +104,17 @@
 		61BAE08C16B8140A00CDAE40 /* PhotoGrid */ = {
 			isa = PBXGroup;
 			children = (
+				61CD7AC516DCE381003F8B5C /* utils */,
+				61CD7AC616DCE394003F8B5C /* models */,
+				61BAE08D16B8140A00CDAE40 /* Supporting Files */,
 				61BAE09516B8140A00CDAE40 /* AppDelegate.h */,
 				61BAE09616B8140A00CDAE40 /* AppDelegate.m */,
-				61BAE0B216B8161200CDAE40 /* DataController.h */,
-				61BAE0B316B8161200CDAE40 /* DataController.m */,
 				61BAE0C216B83E6300CDAE40 /* PhotoGridViewController.h */,
 				61BAE0C316B83E6300CDAE40 /* PhotoGridViewController.m */,
 				61BAE0C416B83E6300CDAE40 /* PhotoGridViewController.xib */,
 				61BAE0CF16B8404F00CDAE40 /* PhotoGridCell.h */,
 				61BAE0D016B8404F00CDAE40 /* PhotoGridCell.m */,
 				61BAE0CD16B83FF100CDAE40 /* PhotoGridCell.xib */,
-				61BAE08D16B8140A00CDAE40 /* Supporting Files */,
 			);
 			path = PhotoGrid;
 			sourceTree = "<group>";
@@ -109,6 +122,8 @@
 		61BAE08D16B8140A00CDAE40 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				61CD7ABE16DCE28C003F8B5C /* ImagePlaceholder.png */,
+				61CD7ABF16DCE28C003F8B5C /* ThumbPlaceholder.png */,
 				61BAE08E16B8140A00CDAE40 /* PhotoGrid-Info.plist */,
 				61BAE08F16B8140A00CDAE40 /* InfoPlist.strings */,
 				61BAE09216B8140A00CDAE40 /* main.m */,
@@ -118,6 +133,28 @@
 				61BAE09C16B8140A00CDAE40 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		61CD7AC516DCE381003F8B5C /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				61CD7AB816DCE28C003F8B5C /* DataParser.h */,
+				61CD7AB916DCE28C003F8B5C /* DataParser.m */,
+				61CD7ABA16DCE28C003F8B5C /* ImageLoader.h */,
+				61CD7ABB16DCE28C003F8B5C /* ImageLoader.m */,
+				61BAE0B216B8161200CDAE40 /* DataController.h */,
+				61BAE0B316B8161200CDAE40 /* DataController.m */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		61CD7AC616DCE394003F8B5C /* models */ = {
+			isa = PBXGroup;
+			children = (
+				61CD7ABC16DCE28C003F8B5C /* ImageModel.h */,
+				61CD7ABD16DCE28C003F8B5C /* ImageModel.m */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +214,8 @@
 				61BAE09D16B8140A00CDAE40 /* Default-568h@2x.png in Resources */,
 				61BAE0C616B83E6300CDAE40 /* PhotoGridViewController.xib in Resources */,
 				61BAE0CE16B83FF100CDAE40 /* PhotoGridCell.xib in Resources */,
+				61CD7AC316DCE28C003F8B5C /* ImagePlaceholder.png in Resources */,
+				61CD7AC416DCE28C003F8B5C /* ThumbPlaceholder.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +231,9 @@
 				61BAE0B416B8161200CDAE40 /* DataController.m in Sources */,
 				61BAE0C516B83E6300CDAE40 /* PhotoGridViewController.m in Sources */,
 				61BAE0D116B8404F00CDAE40 /* PhotoGridCell.m in Sources */,
+				61CD7AC016DCE28C003F8B5C /* DataParser.m in Sources */,
+				61CD7AC116DCE28C003F8B5C /* ImageLoader.m in Sources */,
+				61CD7AC216DCE28C003F8B5C /* ImageModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

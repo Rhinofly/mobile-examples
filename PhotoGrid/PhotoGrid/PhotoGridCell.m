@@ -19,8 +19,8 @@
     
     if (self)
     {
-        
     }
+    
     return self;
 }
 

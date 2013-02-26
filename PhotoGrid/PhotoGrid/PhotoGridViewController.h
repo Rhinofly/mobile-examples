@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ImageLoader.h"
 
-@interface PhotoGridViewController : UICollectionViewController
+@interface PhotoGridViewController : UICollectionViewController <UIScrollViewDelegate, ImageLoaderDelegate>
 
-@property (nonatomic, retain) NSArray *data;
+@property (nonatomic) NSArray *data;
+
+@property (nonatomic) NSMutableDictionary *thumbLoaders;
 
 @end

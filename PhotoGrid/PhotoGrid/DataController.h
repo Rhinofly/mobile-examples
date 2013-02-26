@@ -7,13 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DataParser.h"
 
 @interface DataController : NSObject
 
-@property (nonatomic) NSArray *data;
+@property (nonatomic) NSURLConnection *listConnection;
+@property (nonatomic) NSMutableData *retrievedData;
+@property (nonatomic) NSOperationQueue *queue;
+@property (nonatomic) NSMutableArray *images;
 
 + (DataController *) instance;
 
-- (void) getData;
+- (void) getImages;
 
 @end
