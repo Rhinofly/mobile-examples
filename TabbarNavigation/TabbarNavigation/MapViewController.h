@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MapViewController : UINavigationController
+@interface MapViewController : UIViewController
+{
+    IBOutlet UIButton *showButton;
+}
+
+- (IBAction)showChildView:(id)sender;
 
 @end

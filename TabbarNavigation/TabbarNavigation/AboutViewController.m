@@ -7,6 +7,7 @@
 //
 
 #import "AboutViewController.h"
+#import "AboutDetailViewController.h"
 
 @interface AboutViewController ()
 
@@ -17,10 +18,20 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    
+    if (self)
+    {
+        self.title = NSLocalizedString(@"About", @"About");
+        self.tabBarItem.image = [UIImage imageNamed:@"about"];
     }
+    
     return self;
+}
+
+- (IBAction)showChildView:(id)sender
+{
+    AboutDetailViewController *detailView = [[AboutDetailViewController alloc] initWithNibName:@"AboutDetailViewController" bundle:nil];
+    [[self navigationController] pushViewController:detailView animated:YES];
 }
 
 - (void)viewDidLoad

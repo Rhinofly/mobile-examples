@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface PhotoViewController : UIViewController
+{
+    IBOutlet UIButton *showButton;
+}
+
+- (IBAction)showChildView:(id)sender;
 
 @end

@@ -8,20 +8,31 @@
 
 #import "AppDelegate.h"
 
-#import "FirstViewController.h"
-
-#import "SecondViewController.h"
-
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     // Override point for customization after application launch.
-    UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
-    UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+    UIViewController *photoViewController = [[PhotoViewController alloc] initWithNibName:@"PhotoViewController" bundle:nil];
+    UINavigationController *photoNavigationController = [[UINavigationController alloc] initWithRootViewController:photoViewController];
+    photoNavigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    
+    UIViewController *mapViewController = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+    UINavigationController *mapNavigationController = [[UINavigationController alloc] initWithRootViewController:mapViewController];
+    mapNavigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    
+    UIViewController *uploadViewController = [[UploadViewController alloc] initWithNibName:@"UploadViewController" bundle:nil];
+    UINavigationController *uploadNavigationController = [[UINavigationController alloc] initWithRootViewController:uploadViewController];
+    uploadNavigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    
+    UIViewController *aboutViewController = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];
+    UINavigationController *aboutNavigationController = [[UINavigationController alloc] initWithRootViewController:aboutViewController];
+    aboutNavigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[viewController1, viewController2];
+    self.tabBarController.viewControllers = @[photoNavigationController, mapNavigationController, uploadNavigationController, aboutNavigationController];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

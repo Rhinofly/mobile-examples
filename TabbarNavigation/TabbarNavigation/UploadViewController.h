@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UploadViewController : UINavigationController
+@interface UploadViewController : UIViewController
+{
+    IBOutlet UIButton *showButton;
+}
+
+- (IBAction)showChildView:(id)sender;
 
 @end

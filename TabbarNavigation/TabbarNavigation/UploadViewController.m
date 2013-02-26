@@ -7,6 +7,7 @@
 //
 
 #import "UploadViewController.h"
+#import "UploadDetailViewController.h"
 
 @interface UploadViewController ()
 
@@ -17,10 +18,20 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    
+    if (self)
+    {
+        self.title = NSLocalizedString(@"Upload", @"Upload");
+        self.tabBarItem.image = [UIImage imageNamed:@"upload"];
     }
+    
     return self;
+}
+
+- (IBAction)showChildView:(id)sender
+{
+    UploadDetailViewController *detailView = [[UploadDetailViewController alloc] initWithNibName:@"UploadDetailViewController" bundle:nil];
+    [[self navigationController] pushViewController:detailView animated:YES];
 }
 
 - (void)viewDidLoad

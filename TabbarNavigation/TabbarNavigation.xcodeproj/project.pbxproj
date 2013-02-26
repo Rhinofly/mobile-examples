@@ -16,14 +16,30 @@
 		61CD7AE616DCE5F0003F8B5C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7AE516DCE5F0003F8B5C /* Default.png */; };
 		61CD7AE816DCE5F0003F8B5C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7AE716DCE5F0003F8B5C /* Default@2x.png */; };
 		61CD7AEA16DCE5F0003F8B5C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7AE916DCE5F0003F8B5C /* Default-568h@2x.png */; };
-		61CD7AED16DCE5F0003F8B5C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CD7AEC16DCE5F0003F8B5C /* FirstViewController.m */; };
-		61CD7AEF16DCE5F0003F8B5C /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7AEE16DCE5F0003F8B5C /* first.png */; };
-		61CD7AF116DCE5F0003F8B5C /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7AF016DCE5F0003F8B5C /* first@2x.png */; };
-		61CD7AF416DCE5F0003F8B5C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CD7AF316DCE5F0003F8B5C /* SecondViewController.m */; };
-		61CD7AF616DCE5F0003F8B5C /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7AF516DCE5F0003F8B5C /* second.png */; };
-		61CD7AF816DCE5F0003F8B5C /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7AF716DCE5F0003F8B5C /* second@2x.png */; };
-		61CD7AFB16DCE5F0003F8B5C /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7AF916DCE5F0003F8B5C /* FirstViewController.xib */; };
-		61CD7AFE16DCE5F0003F8B5C /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7AFC16DCE5F0003F8B5C /* SecondViewController.xib */; };
+		61CD7B0C16DCE759003F8B5C /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7B0416DCE759003F8B5C /* about.png */; };
+		61CD7B0D16DCE759003F8B5C /* about@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7B0516DCE759003F8B5C /* about@2x.png */; };
+		61CD7B0E16DCE759003F8B5C /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7B0616DCE759003F8B5C /* map.png */; };
+		61CD7B0F16DCE759003F8B5C /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7B0716DCE759003F8B5C /* map@2x.png */; };
+		61CD7B1016DCE759003F8B5C /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7B0816DCE759003F8B5C /* photo.png */; };
+		61CD7B1116DCE759003F8B5C /* photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7B0916DCE759003F8B5C /* photo@2x.png */; };
+		61CD7B1216DCE759003F8B5C /* upload.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7B0A16DCE759003F8B5C /* upload.png */; };
+		61CD7B1316DCE759003F8B5C /* upload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7B0B16DCE759003F8B5C /* upload@2x.png */; };
+		61CD7B1C16DCE7B1003F8B5C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CD7B1A16DCE7B1003F8B5C /* MapViewController.m */; };
+		61CD7B1D16DCE7B1003F8B5C /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7B1B16DCE7B1003F8B5C /* MapViewController.xib */; };
+		61CD7B2116DCE7D0003F8B5C /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CD7B1F16DCE7D0003F8B5C /* UploadViewController.m */; };
+		61CD7B2216DCE7D0003F8B5C /* UploadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7B2016DCE7D0003F8B5C /* UploadViewController.xib */; };
+		61CD7B2616DCE806003F8B5C /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CD7B2416DCE806003F8B5C /* AboutViewController.m */; };
+		61CD7B2716DCE806003F8B5C /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7B2516DCE806003F8B5C /* AboutViewController.xib */; };
+		61CD7B3E16DD0ACE003F8B5C /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CD7B3C16DD0ACE003F8B5C /* PhotoViewController.m */; };
+		61CD7B3F16DD0ACE003F8B5C /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7B3D16DD0ACE003F8B5C /* PhotoViewController.xib */; };
+		61CD7B4316DD0C32003F8B5C /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CD7B4116DD0C32003F8B5C /* PhotoDetailViewController.m */; };
+		61CD7B4416DD0C32003F8B5C /* PhotoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7B4216DD0C32003F8B5C /* PhotoDetailViewController.xib */; };
+		61CD7B4916DD1084003F8B5C /* MapDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CD7B4716DD1084003F8B5C /* MapDetailViewController.m */; };
+		61CD7B4A16DD1084003F8B5C /* MapDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7B4816DD1084003F8B5C /* MapDetailViewController.xib */; };
+		61CD7B4F16DD10C5003F8B5C /* UploadDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CD7B4D16DD10C4003F8B5C /* UploadDetailViewController.m */; };
+		61CD7B5016DD10C5003F8B5C /* UploadDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7B4E16DD10C5003F8B5C /* UploadDetailViewController.xib */; };
+		61CD7B5616DD1158003F8B5C /* AboutDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CD7B5416DD1158003F8B5C /* AboutDetailViewController.m */; };
+		61CD7B5716DD1158003F8B5C /* AboutDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61CD7B5516DD1158003F8B5C /* AboutDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,16 +56,38 @@
 		61CD7AE516DCE5F0003F8B5C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		61CD7AE716DCE5F0003F8B5C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		61CD7AE916DCE5F0003F8B5C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		61CD7AEB16DCE5F0003F8B5C /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		61CD7AEC16DCE5F0003F8B5C /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		61CD7AEE16DCE5F0003F8B5C /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		61CD7AF016DCE5F0003F8B5C /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		61CD7AF216DCE5F0003F8B5C /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		61CD7AF316DCE5F0003F8B5C /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		61CD7AF516DCE5F0003F8B5C /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		61CD7AF716DCE5F0003F8B5C /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		61CD7AFA16DCE5F0003F8B5C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController.xib; sourceTree = "<group>"; };
-		61CD7AFD16DCE5F0003F8B5C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
+		61CD7B0416DCE759003F8B5C /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about.png; sourceTree = "<group>"; };
+		61CD7B0516DCE759003F8B5C /* about@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about@2x.png"; sourceTree = "<group>"; };
+		61CD7B0616DCE759003F8B5C /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		61CD7B0716DCE759003F8B5C /* map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map@2x.png"; sourceTree = "<group>"; };
+		61CD7B0816DCE759003F8B5C /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
+		61CD7B0916DCE759003F8B5C /* photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo@2x.png"; sourceTree = "<group>"; };
+		61CD7B0A16DCE759003F8B5C /* upload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upload.png; sourceTree = "<group>"; };
+		61CD7B0B16DCE759003F8B5C /* upload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upload@2x.png"; sourceTree = "<group>"; };
+		61CD7B1916DCE7B1003F8B5C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		61CD7B1A16DCE7B1003F8B5C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		61CD7B1B16DCE7B1003F8B5C /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		61CD7B1E16DCE7D0003F8B5C /* UploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadViewController.h; sourceTree = "<group>"; };
+		61CD7B1F16DCE7D0003F8B5C /* UploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadViewController.m; sourceTree = "<group>"; };
+		61CD7B2016DCE7D0003F8B5C /* UploadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadViewController.xib; sourceTree = "<group>"; };
+		61CD7B2316DCE806003F8B5C /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		61CD7B2416DCE806003F8B5C /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		61CD7B2516DCE806003F8B5C /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		61CD7B3B16DD0ACE003F8B5C /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		61CD7B3C16DD0ACE003F8B5C /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		61CD7B3D16DD0ACE003F8B5C /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
+		61CD7B4016DD0C32003F8B5C /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController.h; sourceTree = "<group>"; };
+		61CD7B4116DD0C32003F8B5C /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
+		61CD7B4216DD0C32003F8B5C /* PhotoDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoDetailViewController.xib; sourceTree = "<group>"; };
+		61CD7B4616DD1084003F8B5C /* MapDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDetailViewController.h; sourceTree = "<group>"; };
+		61CD7B4716DD1084003F8B5C /* MapDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDetailViewController.m; sourceTree = "<group>"; };
+		61CD7B4816DD1084003F8B5C /* MapDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapDetailViewController.xib; sourceTree = "<group>"; };
+		61CD7B4C16DD10C4003F8B5C /* UploadDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadDetailViewController.h; sourceTree = "<group>"; };
+		61CD7B4D16DD10C4003F8B5C /* UploadDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadDetailViewController.m; sourceTree = "<group>"; };
+		61CD7B4E16DD10C5003F8B5C /* UploadDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadDetailViewController.xib; sourceTree = "<group>"; };
+		61CD7B5316DD1158003F8B5C /* AboutDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutDetailViewController.h; sourceTree = "<group>"; };
+		61CD7B5416DD1158003F8B5C /* AboutDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutDetailViewController.m; sourceTree = "<group>"; };
+		61CD7B5516DD1158003F8B5C /* AboutDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,16 +136,10 @@
 			children = (
 				61CD7AE216DCE5F0003F8B5C /* AppDelegate.h */,
 				61CD7AE316DCE5F0003F8B5C /* AppDelegate.m */,
-				61CD7AEB16DCE5F0003F8B5C /* FirstViewController.h */,
-				61CD7AEC16DCE5F0003F8B5C /* FirstViewController.m */,
-				61CD7AEE16DCE5F0003F8B5C /* first.png */,
-				61CD7AF016DCE5F0003F8B5C /* first@2x.png */,
-				61CD7AF216DCE5F0003F8B5C /* SecondViewController.h */,
-				61CD7AF316DCE5F0003F8B5C /* SecondViewController.m */,
-				61CD7AF516DCE5F0003F8B5C /* second.png */,
-				61CD7AF716DCE5F0003F8B5C /* second@2x.png */,
-				61CD7AF916DCE5F0003F8B5C /* FirstViewController.xib */,
-				61CD7AFC16DCE5F0003F8B5C /* SecondViewController.xib */,
+				61CD7B4516DD105D003F8B5C /* photo */,
+				61CD7B5216DD114A003F8B5C /* about */,
+				61CD7B4B16DD10B2003F8B5C /* map */,
+				61CD7B5116DD1139003F8B5C /* upload */,
 				61CD7ADA16DCE5F0003F8B5C /* Supporting Files */,
 			);
 			path = TabbarNavigation;
@@ -116,6 +148,14 @@
 		61CD7ADA16DCE5F0003F8B5C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				61CD7B0416DCE759003F8B5C /* about.png */,
+				61CD7B0516DCE759003F8B5C /* about@2x.png */,
+				61CD7B0616DCE759003F8B5C /* map.png */,
+				61CD7B0716DCE759003F8B5C /* map@2x.png */,
+				61CD7B0816DCE759003F8B5C /* photo.png */,
+				61CD7B0916DCE759003F8B5C /* photo@2x.png */,
+				61CD7B0A16DCE759003F8B5C /* upload.png */,
+				61CD7B0B16DCE759003F8B5C /* upload@2x.png */,
 				61CD7ADB16DCE5F0003F8B5C /* TabbarNavigation-Info.plist */,
 				61CD7ADC16DCE5F0003F8B5C /* InfoPlist.strings */,
 				61CD7ADF16DCE5F0003F8B5C /* main.m */,
@@ -125,6 +165,58 @@
 				61CD7AE916DCE5F0003F8B5C /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		61CD7B4516DD105D003F8B5C /* photo */ = {
+			isa = PBXGroup;
+			children = (
+				61CD7B3B16DD0ACE003F8B5C /* PhotoViewController.h */,
+				61CD7B3C16DD0ACE003F8B5C /* PhotoViewController.m */,
+				61CD7B3D16DD0ACE003F8B5C /* PhotoViewController.xib */,
+				61CD7B4016DD0C32003F8B5C /* PhotoDetailViewController.h */,
+				61CD7B4116DD0C32003F8B5C /* PhotoDetailViewController.m */,
+				61CD7B4216DD0C32003F8B5C /* PhotoDetailViewController.xib */,
+			);
+			name = photo;
+			sourceTree = "<group>";
+		};
+		61CD7B4B16DD10B2003F8B5C /* map */ = {
+			isa = PBXGroup;
+			children = (
+				61CD7B1916DCE7B1003F8B5C /* MapViewController.h */,
+				61CD7B1A16DCE7B1003F8B5C /* MapViewController.m */,
+				61CD7B1B16DCE7B1003F8B5C /* MapViewController.xib */,
+				61CD7B4616DD1084003F8B5C /* MapDetailViewController.h */,
+				61CD7B4716DD1084003F8B5C /* MapDetailViewController.m */,
+				61CD7B4816DD1084003F8B5C /* MapDetailViewController.xib */,
+			);
+			name = map;
+			sourceTree = "<group>";
+		};
+		61CD7B5116DD1139003F8B5C /* upload */ = {
+			isa = PBXGroup;
+			children = (
+				61CD7B1E16DCE7D0003F8B5C /* UploadViewController.h */,
+				61CD7B1F16DCE7D0003F8B5C /* UploadViewController.m */,
+				61CD7B2016DCE7D0003F8B5C /* UploadViewController.xib */,
+				61CD7B4C16DD10C4003F8B5C /* UploadDetailViewController.h */,
+				61CD7B4D16DD10C4003F8B5C /* UploadDetailViewController.m */,
+				61CD7B4E16DD10C5003F8B5C /* UploadDetailViewController.xib */,
+			);
+			name = upload;
+			sourceTree = "<group>";
+		};
+		61CD7B5216DD114A003F8B5C /* about */ = {
+			isa = PBXGroup;
+			children = (
+				61CD7B2316DCE806003F8B5C /* AboutViewController.h */,
+				61CD7B2416DCE806003F8B5C /* AboutViewController.m */,
+				61CD7B2516DCE806003F8B5C /* AboutViewController.xib */,
+				61CD7B5316DD1158003F8B5C /* AboutDetailViewController.h */,
+				61CD7B5416DD1158003F8B5C /* AboutDetailViewController.m */,
+				61CD7B5516DD1158003F8B5C /* AboutDetailViewController.xib */,
+			);
+			name = about;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,12 +274,22 @@
 				61CD7AE616DCE5F0003F8B5C /* Default.png in Resources */,
 				61CD7AE816DCE5F0003F8B5C /* Default@2x.png in Resources */,
 				61CD7AEA16DCE5F0003F8B5C /* Default-568h@2x.png in Resources */,
-				61CD7AEF16DCE5F0003F8B5C /* first.png in Resources */,
-				61CD7AF116DCE5F0003F8B5C /* first@2x.png in Resources */,
-				61CD7AF616DCE5F0003F8B5C /* second.png in Resources */,
-				61CD7AF816DCE5F0003F8B5C /* second@2x.png in Resources */,
-				61CD7AFB16DCE5F0003F8B5C /* FirstViewController.xib in Resources */,
-				61CD7AFE16DCE5F0003F8B5C /* SecondViewController.xib in Resources */,
+				61CD7B0C16DCE759003F8B5C /* about.png in Resources */,
+				61CD7B0D16DCE759003F8B5C /* about@2x.png in Resources */,
+				61CD7B0E16DCE759003F8B5C /* map.png in Resources */,
+				61CD7B0F16DCE759003F8B5C /* map@2x.png in Resources */,
+				61CD7B1016DCE759003F8B5C /* photo.png in Resources */,
+				61CD7B1116DCE759003F8B5C /* photo@2x.png in Resources */,
+				61CD7B1216DCE759003F8B5C /* upload.png in Resources */,
+				61CD7B1316DCE759003F8B5C /* upload@2x.png in Resources */,
+				61CD7B1D16DCE7B1003F8B5C /* MapViewController.xib in Resources */,
+				61CD7B2216DCE7D0003F8B5C /* UploadViewController.xib in Resources */,
+				61CD7B2716DCE806003F8B5C /* AboutViewController.xib in Resources */,
+				61CD7B3F16DD0ACE003F8B5C /* PhotoViewController.xib in Resources */,
+				61CD7B4416DD0C32003F8B5C /* PhotoDetailViewController.xib in Resources */,
+				61CD7B4A16DD1084003F8B5C /* MapDetailViewController.xib in Resources */,
+				61CD7B5016DD10C5003F8B5C /* UploadDetailViewController.xib in Resources */,
+				61CD7B5716DD1158003F8B5C /* AboutDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,8 +302,14 @@
 			files = (
 				61CD7AE016DCE5F0003F8B5C /* main.m in Sources */,
 				61CD7AE416DCE5F0003F8B5C /* AppDelegate.m in Sources */,
-				61CD7AED16DCE5F0003F8B5C /* FirstViewController.m in Sources */,
-				61CD7AF416DCE5F0003F8B5C /* SecondViewController.m in Sources */,
+				61CD7B1C16DCE7B1003F8B5C /* MapViewController.m in Sources */,
+				61CD7B2116DCE7D0003F8B5C /* UploadViewController.m in Sources */,
+				61CD7B2616DCE806003F8B5C /* AboutViewController.m in Sources */,
+				61CD7B3E16DD0ACE003F8B5C /* PhotoViewController.m in Sources */,
+				61CD7B4316DD0C32003F8B5C /* PhotoDetailViewController.m in Sources */,
+				61CD7B4916DD1084003F8B5C /* MapDetailViewController.m in Sources */,
+				61CD7B4F16DD10C5003F8B5C /* UploadDetailViewController.m in Sources */,
+				61CD7B5616DD1158003F8B5C /* AboutDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,22 +322,6 @@
 				61CD7ADD16DCE5F0003F8B5C /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		61CD7AF916DCE5F0003F8B5C /* FirstViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				61CD7AFA16DCE5F0003F8B5C /* en */,
-			);
-			name = FirstViewController.xib;
-			sourceTree = "<group>";
-		};
-		61CD7AFC16DCE5F0003F8B5C /* SecondViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				61CD7AFD16DCE5F0003F8B5C /* en */,
-			);
-			name = SecondViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

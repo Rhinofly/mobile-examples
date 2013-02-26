@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "PhotoViewController.h"
+#import "MapViewController.h"
+#import "UploadViewController.h"
+#import "AboutViewController.h"
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
