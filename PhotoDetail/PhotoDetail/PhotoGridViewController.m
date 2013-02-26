@@ -52,13 +52,15 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated
+{
 	[super viewWillAppear:animated];
     
 	[self.navigationController setNavigationBarHidden:YES animated:_showNavigationBarWithAnimation];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
+- (void)viewWillDisappear:(BOOL)animated
+{
 	[super viewWillDisappear:animated];
     
 	[self.navigationController setNavigationBarHidden:NO animated:YES];
@@ -103,7 +105,7 @@
     // Only load cached images; defer new downloads until scrolling ends
     if (!model.thumb)
     {
-        if (self.collectionView.dragging == NO && self.collectionView.decelerating == NO)
+        if (collectionView.dragging == NO && collectionView.decelerating == NO)
         {
             [self loadThumb:model forIndexPath:indexPath];
         }
@@ -112,8 +114,7 @@
         UIImage *image = [UIImage imageNamed:@"ThumbPlaceholder.png"];
         
         cell.imageView.image = image;
-    }
-    else
+    } else
     {
         cell.imageView.image = model.thumb;
     }
@@ -141,8 +142,9 @@
     {
         ImageModel *model = [_data objectAtIndex:[indexPath row]];
         model.thumb = image;
-        PhotoGridCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
         
+        // get cell from index path and typecast this to PhotoGridCell
+        PhotoGridCell *cell = (PhotoGridCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
         cell.imageView.image = model.thumb;
     }
     
@@ -161,7 +163,8 @@
         {
             ImageModel *model = [_data objectAtIndex:indexPath.row];
             
-            if (!model.thumb) // avoid the app icon download if the app already has an icon
+            // only load thumbs that are not chached yet.
+            if (!model.thumb)
             {
                 [self loadThumb:model forIndexPath:indexPath];
             }
