@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61A64E8F16DE0E8500507464 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A64E8E16DE0E8500507464 /* QuartzCore.framework */; };
+		61A64E9116DE27FC00507464 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A64E9016DE27FC00507464 /* CoreImage.framework */; };
 		61CD7AD416DCE5F0003F8B5C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CD7AD316DCE5F0003F8B5C /* UIKit.framework */; };
 		61CD7AD616DCE5F0003F8B5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CD7AD516DCE5F0003F8B5C /* Foundation.framework */; };
 		61CD7AD816DCE5F0003F8B5C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CD7AD716DCE5F0003F8B5C /* CoreGraphics.framework */; };
@@ -43,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61A64E8E16DE0E8500507464 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		61A64E9016DE27FC00507464 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		61CD7AD016DCE5F0003F8B5C /* TabbarNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabbarNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61CD7AD316DCE5F0003F8B5C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		61CD7AD516DCE5F0003F8B5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -95,6 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61A64E9116DE27FC00507464 /* CoreImage.framework in Frameworks */,
+				61A64E8F16DE0E8500507464 /* QuartzCore.framework in Frameworks */,
 				61CD7AD416DCE5F0003F8B5C /* UIKit.framework in Frameworks */,
 				61CD7AD616DCE5F0003F8B5C /* Foundation.framework in Frameworks */,
 				61CD7AD816DCE5F0003F8B5C /* CoreGraphics.framework in Frameworks */,
@@ -124,6 +130,8 @@
 		61CD7AD216DCE5F0003F8B5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61A64E9016DE27FC00507464 /* CoreImage.framework */,
+				61A64E8E16DE0E8500507464 /* QuartzCore.framework */,
 				61CD7AD316DCE5F0003F8B5C /* UIKit.framework */,
 				61CD7AD516DCE5F0003F8B5C /* Foundation.framework */,
 				61CD7AD716DCE5F0003F8B5C /* CoreGraphics.framework */,
@@ -389,6 +397,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TabbarNavigation/TabbarNavigation-Prefix.pch";
 				INFOPLIST_FILE = "TabbarNavigation/TabbarNavigation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -400,6 +409,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TabbarNavigation/TabbarNavigation-Prefix.pch";
 				INFOPLIST_FILE = "TabbarNavigation/TabbarNavigation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -424,6 +434,7 @@
 				61CD7B0316DCE5F0003F8B5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -17,10 +17,31 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+    
+    if (self)
+    {
         // Custom initialization
     }
+    
     return self;
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    
+    // See PhotoViewController class for animation documentation.
+    if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound)
+    {
+        CATransition* transition = [CATransition animation];
+        transition.timingFunction = [CAMediaTimingFunction  functionWithName:kCAMediaTimingFunctionEaseIn];
+        transition.duration = 1.0f;
+        transition.type = @"oglFlip";
+        transition.subtype = kCATransitionFromLeft;
+        [self.navigationController.view.layer removeAllAnimations];
+        [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
+    }
+    
+    [super viewWillDisappear:animated];
 }
 
 - (void)viewDidLoad

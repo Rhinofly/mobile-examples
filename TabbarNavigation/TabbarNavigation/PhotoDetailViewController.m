@@ -26,6 +26,30 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    
+// See PhotoViewController class for animation documentation.
+//    if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound)
+//    {
+//        CATransition* transition = [CATransition animation];
+//        transition.timingFunction = [CAMediaTimingFunction  functionWithName:kCAMediaTimingFunctionEaseIn];
+//        transition.duration = 1.0f;
+//        transition.type = @"pageUnCurl";
+//        transition.subtype = kCATransitionFromLeft;
+//        [self.navigationController.view.layer removeAllAnimations];
+//        [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
+//    }
+    
+    [super viewWillDisappear:animated];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

@@ -31,7 +31,40 @@
 - (IBAction)showChildView:(id)sender
 {
     AboutDetailViewController *detailView = [[AboutDetailViewController alloc] initWithNibName:@"AboutDetailViewController" bundle:nil];
-    [[self navigationController] pushViewController:detailView animated:YES];
+
+    // Animation direction
+    //    - fromRight (kCATransitionFromRight)
+    //    - fromLeft (kCATransitionFromLeft)
+    //    - fromTop (kCATransitionFromTop)
+    //    - fromBottom (kCATransitionFromBottom)
+    
+    // Animation transition type
+    //    - cameraIris
+    //    - cube
+    //    - fade (kCATransitionFade)
+    //    - moveIn (kCATransitionMoveIn)
+    //    - oglFlip
+    //    - pageCurl
+    //    - pageUnCurl
+    //    - push (kCATransitionPush)
+    //    - reveal (kCATransitionReveal)
+    //    - rippleEffect
+    //    - suckEffect
+    
+    // complex transition animation. This allows you to use an extend of animation types
+    // see for more documentation: http://iphonedevwiki.net/index.php/CATransition
+    // CIFilter* filter = [CIFilter filterWithName:@"suckEffect"];
+    // [filter setValue:[NSValue valueWithCGPoint:CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2)] forKey:@"inputPosition"];
+    
+    CATransition* transition = [CATransition animation];
+    transition.timingFunction = [CAMediaTimingFunction  functionWithName:kCAMediaTimingFunctionEaseIn];
+    transition.duration = 1.0f;
+    //transition.filter = filter;
+    transition.type = kCATransitionMoveIn;
+    transition.subtype = kCATransitionFromRight;
+    [self.navigationController.view.layer removeAllAnimations];
+    [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
+    [self.navigationController pushViewController:detailView animated:YES];
 }
 
 - (void)viewDidLoad
