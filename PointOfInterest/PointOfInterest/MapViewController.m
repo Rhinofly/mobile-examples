@@ -23,6 +23,7 @@
 @synthesize data = _data;
 @synthesize map = _map;
 @synthesize annotations = _annotations;
+@synthesize locationManager = _locationManager;
 
 - (void)viewDidLoad
 {
@@ -40,6 +41,8 @@
     newRegion.span.latitudeDelta = 0.112872;
     newRegion.span.longitudeDelta = 0.109863;
     [_map setRegion:newRegion animated:YES];
+    
+    _map.showsUserLocation = YES;
 }
 
 - (void)reloadData
@@ -58,6 +61,15 @@
 // create custom markers
 - (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
+    if ([annotation isKindOfClass:[MKUserLocation class]])
+    {
+        // custom callout title for the user location.
+        ((MKUserLocation *)annotation).title = @"Mijn locatie";
+        
+        //return nil to use default blue dot view
+        return nil;  
+    }
+    
     if ([annotation isKindOfClass:[MapAnnotationModel class]])
     {
         static NSString *MapAnnotationModelIdentifier = @"MapAnnotationModelIdentifier";

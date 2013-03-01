@@ -11,9 +11,10 @@
 #import "MapAnnotationView.h"
 #import "PhotoDetailViewController.h"
 
-@interface MapViewController : UIViewController <MKMapViewDelegate>
+@interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic) NSMutableArray *data;
+@property(nonatomic, retain)CLLocationManager *locationManager;
 
 - (void)reloadData;
 

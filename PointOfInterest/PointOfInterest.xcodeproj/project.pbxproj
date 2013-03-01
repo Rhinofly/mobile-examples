@@ -16,8 +16,22 @@
 		6147EB0A16DE513000703F0C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6147EB0916DE513000703F0C /* Default.png */; };
 		6147EB0C16DE513000703F0C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6147EB0B16DE513000703F0C /* Default@2x.png */; };
 		6147EB0E16DE513000703F0C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6147EB0D16DE513000703F0C /* Default-568h@2x.png */; };
-		6147EB1116DE513000703F0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6147EB1016DE513000703F0C /* ViewController.m */; };
-		6147EB1416DE513000703F0C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6147EB1216DE513000703F0C /* ViewController.xib */; };
+		6147EB1116DE513000703F0C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6147EB1016DE513000703F0C /* MapViewController.m */; };
+		6147EB1416DE513000703F0C /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6147EB1216DE513000703F0C /* MapViewController.xib */; };
+		6147EB1B16DE52DB00703F0C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6147EB1A16DE52DB00703F0C /* MapKit.framework */; };
+		6147EB1E16DE545400703F0C /* MapAnnotationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6147EB1D16DE545400703F0C /* MapAnnotationModel.m */; };
+		6147EB2516DE647600703F0C /* mapMarker.png in Resources */ = {isa = PBXBuildFile; fileRef = 6147EB2316DE647600703F0C /* mapMarker.png */; };
+		6147EB2616DE647600703F0C /* mapMarker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6147EB2416DE647600703F0C /* mapMarker@2x.png */; };
+		6147EB2F16DE66DD00703F0C /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6147EB2816DE66DD00703F0C /* DataController.m */; };
+		6147EB3016DE66DD00703F0C /* DataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6147EB2A16DE66DD00703F0C /* DataParser.m */; };
+		6147EB3116DE66DD00703F0C /* ImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6147EB2C16DE66DD00703F0C /* ImageLoader.m */; };
+		6147EB3216DE66DD00703F0C /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6147EB2E16DE66DD00703F0C /* ImageModel.m */; };
+		6147EB3416DE6BC400703F0C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6147EB3316DE6BC400703F0C /* CoreLocation.framework */; };
+		615458E816E0A99C005411A2 /* ImagePlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 615458E716E0A99C005411A2 /* ImagePlaceholder.png */; };
+		615458EA16E0BC58005411A2 /* ThumbPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 615458E916E0BC58005411A2 /* ThumbPlaceholder.png */; };
+		61FE116916DF878B009E64C6 /* MapAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FE116816DF878B009E64C6 /* MapAnnotationView.m */; };
+		61FE116F16DFC269009E64C6 /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FE116D16DFC269009E64C6 /* PhotoDetailViewController.m */; };
+		61FE117016DFC269009E64C6 /* PhotoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61FE116E16DFC269009E64C6 /* PhotoDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +48,30 @@
 		6147EB0916DE513000703F0C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		6147EB0B16DE513000703F0C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6147EB0D16DE513000703F0C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		6147EB0F16DE513000703F0C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6147EB1016DE513000703F0C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		6147EB1316DE513000703F0C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		6147EB0F16DE513000703F0C /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		6147EB1016DE513000703F0C /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		6147EB1316DE513000703F0C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MapViewController.xib; sourceTree = "<group>"; };
+		6147EB1A16DE52DB00703F0C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6147EB1C16DE545400703F0C /* MapAnnotationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotationModel.h; sourceTree = "<group>"; };
+		6147EB1D16DE545400703F0C /* MapAnnotationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotationModel.m; sourceTree = "<group>"; };
+		6147EB2316DE647600703F0C /* mapMarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapMarker.png; sourceTree = "<group>"; };
+		6147EB2416DE647600703F0C /* mapMarker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapMarker@2x.png"; sourceTree = "<group>"; };
+		6147EB2716DE66DD00703F0C /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
+		6147EB2816DE66DD00703F0C /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
+		6147EB2916DE66DD00703F0C /* DataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataParser.h; sourceTree = "<group>"; };
+		6147EB2A16DE66DD00703F0C /* DataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataParser.m; sourceTree = "<group>"; };
+		6147EB2B16DE66DD00703F0C /* ImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLoader.h; sourceTree = "<group>"; };
+		6147EB2C16DE66DD00703F0C /* ImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLoader.m; sourceTree = "<group>"; };
+		6147EB2D16DE66DD00703F0C /* ImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
+		6147EB2E16DE66DD00703F0C /* ImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
+		6147EB3316DE6BC400703F0C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		615458E716E0A99C005411A2 /* ImagePlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ImagePlaceholder.png; sourceTree = "<group>"; };
+		615458E916E0BC58005411A2 /* ThumbPlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThumbPlaceholder.png; sourceTree = "<group>"; };
+		61FE116716DF878B009E64C6 /* MapAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotationView.h; sourceTree = "<group>"; };
+		61FE116816DF878B009E64C6 /* MapAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotationView.m; sourceTree = "<group>"; };
+		61FE116C16DFC269009E64C6 /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController.h; sourceTree = "<group>"; };
+		61FE116D16DFC269009E64C6 /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
+		61FE116E16DFC269009E64C6 /* PhotoDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6147EB3416DE6BC400703F0C /* CoreLocation.framework in Frameworks */,
+				6147EB1B16DE52DB00703F0C /* MapKit.framework in Frameworks */,
 				6147EAF816DE513000703F0C /* UIKit.framework in Frameworks */,
 				6147EAFA16DE513000703F0C /* Foundation.framework in Frameworks */,
 				6147EAFC16DE513000703F0C /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +110,8 @@
 		6147EAF616DE513000703F0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6147EB3316DE6BC400703F0C /* CoreLocation.framework */,
+				6147EB1A16DE52DB00703F0C /* MapKit.framework */,
 				6147EAF716DE513000703F0C /* UIKit.framework */,
 				6147EAF916DE513000703F0C /* Foundation.framework */,
 				6147EAFB16DE513000703F0C /* CoreGraphics.framework */,
@@ -83,11 +122,18 @@
 		6147EAFD16DE513000703F0C /* PointOfInterest */ = {
 			isa = PBXGroup;
 			children = (
+				61FE116A16DFBB7A009E64C6 /* utils */,
+				61FE116B16DFBB88009E64C6 /* models */,
 				6147EB0616DE513000703F0C /* AppDelegate.h */,
 				6147EB0716DE513000703F0C /* AppDelegate.m */,
-				6147EB0F16DE513000703F0C /* ViewController.h */,
-				6147EB1016DE513000703F0C /* ViewController.m */,
-				6147EB1216DE513000703F0C /* ViewController.xib */,
+				6147EB0F16DE513000703F0C /* MapViewController.h */,
+				6147EB1016DE513000703F0C /* MapViewController.m */,
+				6147EB1216DE513000703F0C /* MapViewController.xib */,
+				61FE116C16DFC269009E64C6 /* PhotoDetailViewController.h */,
+				61FE116D16DFC269009E64C6 /* PhotoDetailViewController.m */,
+				61FE116E16DFC269009E64C6 /* PhotoDetailViewController.xib */,
+				61FE116716DF878B009E64C6 /* MapAnnotationView.h */,
+				61FE116816DF878B009E64C6 /* MapAnnotationView.m */,
 				6147EAFE16DE513000703F0C /* Supporting Files */,
 			);
 			path = PointOfInterest;
@@ -96,6 +142,10 @@
 		6147EAFE16DE513000703F0C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				615458E916E0BC58005411A2 /* ThumbPlaceholder.png */,
+				615458E716E0A99C005411A2 /* ImagePlaceholder.png */,
+				6147EB2316DE647600703F0C /* mapMarker.png */,
+				6147EB2416DE647600703F0C /* mapMarker@2x.png */,
 				6147EAFF16DE513000703F0C /* PointOfInterest-Info.plist */,
 				6147EB0016DE513000703F0C /* InfoPlist.strings */,
 				6147EB0316DE513000703F0C /* main.m */,
@@ -105,6 +155,30 @@
 				6147EB0D16DE513000703F0C /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		61FE116A16DFBB7A009E64C6 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				6147EB2716DE66DD00703F0C /* DataController.h */,
+				6147EB2816DE66DD00703F0C /* DataController.m */,
+				6147EB2916DE66DD00703F0C /* DataParser.h */,
+				6147EB2A16DE66DD00703F0C /* DataParser.m */,
+				6147EB2B16DE66DD00703F0C /* ImageLoader.h */,
+				6147EB2C16DE66DD00703F0C /* ImageLoader.m */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		61FE116B16DFBB88009E64C6 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				6147EB2D16DE66DD00703F0C /* ImageModel.h */,
+				6147EB2E16DE66DD00703F0C /* ImageModel.m */,
+				6147EB1C16DE545400703F0C /* MapAnnotationModel.h */,
+				6147EB1D16DE545400703F0C /* MapAnnotationModel.m */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +236,12 @@
 				6147EB0A16DE513000703F0C /* Default.png in Resources */,
 				6147EB0C16DE513000703F0C /* Default@2x.png in Resources */,
 				6147EB0E16DE513000703F0C /* Default-568h@2x.png in Resources */,
-				6147EB1416DE513000703F0C /* ViewController.xib in Resources */,
+				6147EB1416DE513000703F0C /* MapViewController.xib in Resources */,
+				6147EB2516DE647600703F0C /* mapMarker.png in Resources */,
+				6147EB2616DE647600703F0C /* mapMarker@2x.png in Resources */,
+				61FE117016DFC269009E64C6 /* PhotoDetailViewController.xib in Resources */,
+				615458E816E0A99C005411A2 /* ImagePlaceholder.png in Resources */,
+				615458EA16E0BC58005411A2 /* ThumbPlaceholder.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +254,14 @@
 			files = (
 				6147EB0416DE513000703F0C /* main.m in Sources */,
 				6147EB0816DE513000703F0C /* AppDelegate.m in Sources */,
-				6147EB1116DE513000703F0C /* ViewController.m in Sources */,
+				6147EB1116DE513000703F0C /* MapViewController.m in Sources */,
+				6147EB1E16DE545400703F0C /* MapAnnotationModel.m in Sources */,
+				6147EB2F16DE66DD00703F0C /* DataController.m in Sources */,
+				6147EB3016DE66DD00703F0C /* DataParser.m in Sources */,
+				6147EB3116DE66DD00703F0C /* ImageLoader.m in Sources */,
+				6147EB3216DE66DD00703F0C /* ImageModel.m in Sources */,
+				61FE116916DF878B009E64C6 /* MapAnnotationView.m in Sources */,
+				61FE116F16DFC269009E64C6 /* PhotoDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,12 +276,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		6147EB1216DE513000703F0C /* ViewController.xib */ = {
+		6147EB1216DE513000703F0C /* MapViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6147EB1316DE513000703F0C /* en */,
 			);
-			name = ViewController.xib;
+			name = MapViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -226,7 +312,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -250,7 +336,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -298,6 +384,7 @@
 				6147EB1916DE513000703F0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
