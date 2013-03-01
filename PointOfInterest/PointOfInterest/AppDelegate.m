@@ -7,19 +7,47 @@
 //
 
 #import "AppDelegate.h"
-
-#import "ViewController.h"
+#import "MapViewController.h"
 
 @implementation AppDelegate
+
+@synthesize dataController = _dataController;
+@synthesize viewController = _viewController;
+@synthesize navigationController = _navigationController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    self.viewController = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+    
+    // Create navigationcontroller and this as rootviewvcontroller
+    // this will add navigationbar functionality.
+    _navigationController = [[UINavigationController alloc] initWithRootViewController:_viewController];
+    _navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    self.window.rootViewController = _navigationController;
     [self.window makeKeyAndVisible];
+    
+    _dataController = [DataController instance];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(noDataHandler:) name:@"noData" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotDataHandler:) name:@"gotData" object:nil];
+    [self.viewController setData: _dataController.images];
+    [_dataController getImages];
+    
     return YES;
+}
+
+- (void)noDataHandler:(NSNotification *)notification
+{
+    NSLog(@"No data");
+}
+
+- (void)gotDataHandler:(NSNotification *)notification
+{
+    NSLog(@"Got data");
+    
+    // reload the data on the collectionview
+    [self.viewController reloadData];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

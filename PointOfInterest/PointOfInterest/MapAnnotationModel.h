@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import "ImageModel.h"
 
-@interface MapAnnotationModel : NSObject
+@interface MapAnnotationModel : NSObject <MKAnnotation>
+
+@property ImageModel *model;
+
+- (id)initWithModel:(ImageModel *)model;
 
 @end

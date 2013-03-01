@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MapViewController.h
 //  PointOfInterest
 //
 //  Created by Johan Haneveld on 2/27/13.
@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import "MapAnnotationView.h"
+#import "PhotoDetailViewController.h"
 
-@interface ViewController : UIViewController
+@interface MapViewController : UIViewController <MKMapViewDelegate>
+
+@property (nonatomic) NSMutableArray *data;
+
+- (void)reloadData;
 
 @end

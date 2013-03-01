@@ -7,13 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataController.h"
 
-@class ViewController;
+@class MapViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) ViewController *viewController;
+@property (strong, nonatomic) MapViewController *viewController;
+@property (strong, nonatomic) UINavigationController *navigationController;
+
+@property (strong, nonatomic) DataController *dataController;
 
 @end
