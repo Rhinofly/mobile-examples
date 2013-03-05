@@ -25,6 +25,16 @@
 @synthesize annotations = _annotations;
 @synthesize locationManager = _locationManager;
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if (![self.navigationController isNavigationBarHidden])
+    {
+        [self.navigationController setNavigationBarHidden:YES animated:animated];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -34,12 +44,14 @@
     
     _annotations = [NSMutableArray array];
     
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    
     // start at the city Utrecht
     MKCoordinateRegion newRegion;
     newRegion.center.latitude = 52.0901422;
     newRegion.center.longitude = 5.1096649;
-    newRegion.span.latitudeDelta = 0.112872;
-    newRegion.span.longitudeDelta = 0.109863;
+    newRegion.span.latitudeDelta = 0.1;
+    newRegion.span.longitudeDelta = 0.1;
     [_map setRegion:newRegion animated:YES];
     
     _map.showsUserLocation = YES;
