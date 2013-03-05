@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import "UploadSendViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+@property IBOutlet UIButton *cameraButton;
+
+- (IBAction)cameraSelect:(id)sender;
 
 @end

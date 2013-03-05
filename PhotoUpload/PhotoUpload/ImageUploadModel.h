@@ -10,4 +10,7 @@
 
 @interface ImageUploadModel : NSObject
 
+@property (nonatomic) NSString *caption;
+@property (nonatomic) Byte *image;
+
 @end

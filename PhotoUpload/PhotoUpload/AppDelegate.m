@@ -12,13 +12,22 @@
 
 @implementation AppDelegate
 
+@synthesize viewController = _viewController;
+@synthesize navigationController = _navigationController;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    
+    // Create navigationcontroller and this as rootviewvcontroller
+    // this will add navigationbar functionality.
+    _navigationController = [[UINavigationController alloc] initWithRootViewController:_viewController];
+    _navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    self.window.rootViewController = _navigationController;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

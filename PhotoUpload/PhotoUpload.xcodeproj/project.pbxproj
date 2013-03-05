@@ -18,6 +18,11 @@
 		61CA13BC16E0EEC300E79A91 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CA13BB16E0EEC300E79A91 /* Default-568h@2x.png */; };
 		61CA13BF16E0EEC300E79A91 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CA13BE16E0EEC300E79A91 /* ViewController.m */; };
 		61CA13C216E0EEC300E79A91 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61CA13C016E0EEC300E79A91 /* ViewController.xib */; };
+		61CA13D316E0FCD600E79A91 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CA13D216E0FCD600E79A91 /* MobileCoreServices.framework */; };
+		61CA13D716E1028D00E79A91 /* UploadSendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CA13D516E1028D00E79A91 /* UploadSendViewController.m */; };
+		61CA13D816E1028D00E79A91 /* UploadSendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61CA13D616E1028D00E79A91 /* UploadSendViewController.xib */; };
+		61E02E4116E4BABD00F1764D /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E02E4016E4BABD00F1764D /* ImageModel.m */; };
+		61E02E4516E4CDA100F1764D /* ImageUploadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E02E4416E4CDA100F1764D /* ImageUploadModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,14 @@
 		61CA13BD16E0EEC300E79A91 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		61CA13BE16E0EEC300E79A91 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		61CA13C116E0EEC300E79A91 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		61CA13D216E0FCD600E79A91 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		61CA13D416E1028D00E79A91 /* UploadSendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadSendViewController.h; sourceTree = "<group>"; };
+		61CA13D516E1028D00E79A91 /* UploadSendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadSendViewController.m; sourceTree = "<group>"; };
+		61CA13D616E1028D00E79A91 /* UploadSendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadSendViewController.xib; sourceTree = "<group>"; };
+		61E02E3F16E4BABD00F1764D /* ImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
+		61E02E4016E4BABD00F1764D /* ImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
+		61E02E4316E4CDA100F1764D /* ImageUploadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUploadModel.h; sourceTree = "<group>"; };
+		61E02E4416E4CDA100F1764D /* ImageUploadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUploadModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61CA13D316E0FCD600E79A91 /* MobileCoreServices.framework in Frameworks */,
 				61CA13A616E0EEC300E79A91 /* UIKit.framework in Frameworks */,
 				61CA13A816E0EEC300E79A91 /* Foundation.framework in Frameworks */,
 				61CA13AA16E0EEC300E79A91 /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +87,7 @@
 		61CA13A416E0EEC300E79A91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61CA13D216E0FCD600E79A91 /* MobileCoreServices.framework */,
 				61CA13A516E0EEC300E79A91 /* UIKit.framework */,
 				61CA13A716E0EEC300E79A91 /* Foundation.framework */,
 				61CA13A916E0EEC300E79A91 /* CoreGraphics.framework */,
@@ -83,12 +98,16 @@
 		61CA13AB16E0EEC300E79A91 /* PhotoUpload */ = {
 			isa = PBXGroup;
 			children = (
+				61E02E4216E4BAC200F1764D /* models */,
+				61CA13AC16E0EEC300E79A91 /* Supporting Files */,
 				61CA13B416E0EEC300E79A91 /* AppDelegate.h */,
 				61CA13B516E0EEC300E79A91 /* AppDelegate.m */,
 				61CA13BD16E0EEC300E79A91 /* ViewController.h */,
 				61CA13BE16E0EEC300E79A91 /* ViewController.m */,
 				61CA13C016E0EEC300E79A91 /* ViewController.xib */,
-				61CA13AC16E0EEC300E79A91 /* Supporting Files */,
+				61CA13D416E1028D00E79A91 /* UploadSendViewController.h */,
+				61CA13D516E1028D00E79A91 /* UploadSendViewController.m */,
+				61CA13D616E1028D00E79A91 /* UploadSendViewController.xib */,
 			);
 			path = PhotoUpload;
 			sourceTree = "<group>";
@@ -105,6 +124,17 @@
 				61CA13BB16E0EEC300E79A91 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		61E02E4216E4BAC200F1764D /* models */ = {
+			isa = PBXGroup;
+			children = (
+				61E02E3F16E4BABD00F1764D /* ImageModel.h */,
+				61E02E4016E4BABD00F1764D /* ImageModel.m */,
+				61E02E4316E4CDA100F1764D /* ImageUploadModel.h */,
+				61E02E4416E4CDA100F1764D /* ImageUploadModel.m */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +193,7 @@
 				61CA13BA16E0EEC300E79A91 /* Default@2x.png in Resources */,
 				61CA13BC16E0EEC300E79A91 /* Default-568h@2x.png in Resources */,
 				61CA13C216E0EEC300E79A91 /* ViewController.xib in Resources */,
+				61CA13D816E1028D00E79A91 /* UploadSendViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +207,9 @@
 				61CA13B216E0EEC300E79A91 /* main.m in Sources */,
 				61CA13B616E0EEC300E79A91 /* AppDelegate.m in Sources */,
 				61CA13BF16E0EEC300E79A91 /* ViewController.m in Sources */,
+				61CA13D716E1028D00E79A91 /* UploadSendViewController.m in Sources */,
+				61E02E4116E4BABD00F1764D /* ImageModel.m in Sources */,
+				61E02E4516E4CDA100F1764D /* ImageUploadModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +332,7 @@
 				61CA13C716E0EEC300E79A91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

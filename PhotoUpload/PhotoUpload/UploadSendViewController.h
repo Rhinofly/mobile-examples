@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ImageUploadModel.h"
 
 @interface UploadSendViewController : UIViewController
+
+@property (nonatomic) UIImage *image;
+
+@property (nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic) IBOutlet UITextField *captionLabel;
+@property (nonatomic) IBOutlet UIButton *uploadButton;
+
+- (IBAction)uploadTouched:(id)sender;
 
 @end
