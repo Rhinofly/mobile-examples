@@ -25,14 +25,18 @@
 @synthesize annotations = _annotations;
 @synthesize locationManager = _locationManager;
 
--(void)viewWillAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
+	[super viewWillAppear:animated];
     
-    if (![self.navigationController isNavigationBarHidden])
-    {
-        [self.navigationController setNavigationBarHidden:YES animated:animated];
-    }
+	[self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[super viewWillDisappear:animated];
+    
+	[self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)viewDidLoad
@@ -40,11 +44,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    // hide navigation bar in map view
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showDetail:) name:@"showDetail" object:nil];
     
     _annotations = [NSMutableArray array];
-    
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
     
     // start at the city Utrecht
     MKCoordinateRegion newRegion;
@@ -54,6 +59,7 @@
     newRegion.span.longitudeDelta = 0.1;
     [_map setRegion:newRegion animated:YES];
     
+    // add user location to the map
     _map.showsUserLocation = YES;
 }
 
@@ -82,6 +88,7 @@
         return nil;  
     }
     
+    // custom map annotation marker
     if ([annotation isKindOfClass:[MapAnnotationModel class]])
     {
         static NSString *MapAnnotationModelIdentifier = @"MapAnnotationModelIdentifier";

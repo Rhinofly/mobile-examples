@@ -40,7 +40,7 @@
     _loader.delegate = self;
     [_loader start:[NSString stringWithFormat:@"%@%@", @"http://", _model.url]];
     
-    // load image without. easy implementation when you dont want to do anything after loading.
+    // load image without callback. easy implementation when you dont want to do anything after loading.
     //NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", @"http://", _image.url]];
 	//_imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
     
