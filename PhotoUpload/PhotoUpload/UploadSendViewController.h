@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "ImageUploadModel.h"
+#import "Base64.h"
+#import "ImageUploader.h"
 
-@interface UploadSendViewController : UIViewController
+@interface UploadSendViewController : UIViewController <ImageUploaderDelegate>
 
 @property (nonatomic) UIImage *image;
+@property  (nonatomic) NSURLConnection *connection;
 
+@property (nonatomic) IBOutlet UIImageView *background;
+@property (nonatomic) IBOutlet UIImageView *imageContainerView;
 @property (nonatomic) IBOutlet UIImageView *imageView;
 @property (nonatomic) IBOutlet UITextField *captionLabel;
 @property (nonatomic) IBOutlet UIButton *uploadButton;

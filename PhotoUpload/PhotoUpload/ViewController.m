@@ -31,9 +31,10 @@
     
     // Hides the controls for moving & scaling pictures, or for
     // trimming movies. To instead show the controls, use YES.
-    cameraUI.allowsEditing = NO;
+    cameraUI.allowsEditing = YES;
     cameraUI.delegate = self;
     
+    // camera interface
     [self presentViewController:cameraUI animated:YES completion:nil];
 }
 
@@ -51,18 +52,33 @@
         
         UploadSendViewController *uploadView = [[UploadSendViewController alloc] initWithNibName:@"UploadSendViewController" bundle:nil];
         [uploadView setImage:imageToSave];
-        [[self navigationController] pushViewController:uploadView animated:false];
+        [[self navigationController] pushViewController:uploadView animated:NO];
     }
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+    
+	[self.navigationController setNavigationBarHidden:YES animated:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[super viewWillDisappear:animated];
+    
+	[self.navigationController setNavigationBarHidden:NO animated:animated];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    // show button only if the device supports camera.
+    [_cameraButton.titleLabel setFont:[UIFont fontWithName:@"Adelle Basic" size:24]];
     _cameraButton.hidden = ![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
 }
 
