@@ -15,27 +15,36 @@
 @implementation ViewController
 
 @synthesize cameraButton = _cameraButton;
+@synthesize libraryButton = _libraryButton;
 
 - (IBAction)cameraSelect:(id)sender
 {
-    //[self startCameraControllerFromViewController: self usingDelegate: self];
-    
-    UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
-    cameraUI.sourceType = UIImagePickerControllerSourceTypeCamera;
+    [self mediaTypeSelect:UIImagePickerControllerSourceTypeCamera];
+}
+
+- (IBAction)librarySelect:(id)sender
+{
+    [self mediaTypeSelect:UIImagePickerControllerSourceTypePhotoLibrary];
+}
+
+- (void)mediaTypeSelect:(NSUInteger)sourceType
+{
+    UIImagePickerController *mediaUI = [[UIImagePickerController alloc] init];
+    mediaUI.sourceType = sourceType;
     
     // Displays a control that allows the user to choose picture or movie capture, if both are available:
     //cameraUI.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
     
     // only make movie or image avaiable: kUTTypeMovie : kUTTypeImage
-    cameraUI.mediaTypes = [[NSArray alloc] initWithObjects: (NSString *) kUTTypeImage, nil];
+    mediaUI.mediaTypes = [[NSArray alloc] initWithObjects: (NSString *) kUTTypeImage, nil];
     
     // Hides the controls for moving & scaling pictures, or for
     // trimming movies. To instead show the controls, use YES.
-    cameraUI.allowsEditing = YES;
-    cameraUI.delegate = self;
+    mediaUI.allowsEditing = YES;
+    mediaUI.delegate = self;
     
     // camera interface
-    [self presentViewController:cameraUI animated:YES completion:nil];
+    [self presentViewController:mediaUI animated:YES completion:nil];
 }
 
 // For responding to the user accepting a newly-captured picture or movie
@@ -47,8 +56,12 @@
     if (CFStringCompare ((CFStringRef) mediaType, kUTTypeImage, 0) == kCFCompareEqualTo)
     {
         UIImage *imageToSave = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
+        
         // Save the new image (original or edited) to the Camera Roll
-        UIImageWriteToSavedPhotosAlbum (imageToSave, nil, nil , nil);
+        if (picker.sourceType == UIImagePickerControllerSourceTypeCamera)
+        {
+            UIImageWriteToSavedPhotosAlbum (imageToSave, nil, nil , nil);
+        }
         
         UploadSendViewController *uploadView = [[UploadSendViewController alloc] initWithNibName:@"UploadSendViewController" bundle:nil];
         [uploadView setImage:imageToSave];
@@ -80,6 +93,10 @@
     // show button only if the device supports camera.
     [_cameraButton.titleLabel setFont:[UIFont fontWithName:@"Adelle Basic" size:24]];
     _cameraButton.hidden = ![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
+    
+    // show button only if the device supports photo library.
+    [_libraryButton.titleLabel setFont:[UIFont fontWithName:@"Adelle Basic" size:24]];
+    _libraryButton.hidden = ![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary];
 }
 
 - (void)didReceiveMemoryWarning
