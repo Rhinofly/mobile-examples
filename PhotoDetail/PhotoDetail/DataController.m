@@ -9,7 +9,7 @@
 #import "DataController.h"
 #import "DataParser.h"
 
-#define imagesURL [NSURL URLWithString: @"http://192.168.124.97:9000/jsonList"]
+#define imagesURL [NSURL URLWithString: @"http://192.168.124.144:9000/jsonList"]
 
 static DataController *dataController = nil;
 

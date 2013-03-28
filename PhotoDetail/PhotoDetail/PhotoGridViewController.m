@@ -18,7 +18,6 @@
 @implementation PhotoGridViewController
 
 @synthesize data = _data;
-@synthesize showNavigationBarWithAnimation = _showNavigationBarWithAnimation;
 @synthesize thumbLoaders = _thumbLoaders;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -27,9 +26,6 @@
     
     if (self)
     {
-        // first time the view loads , dont show the navigationbar.
-        _showNavigationBarWithAnimation = NO;
-        
         // Two ways to register a cell for the collection. First is by class, the other by nib
         //[self.collectionView registerClass:[PhotoGridCell class] forCellWithReuseIdentifier:@"Cell"];
         [self.collectionView registerNib:[UINib nibWithNibName:@"PhotoGridCell" bundle:nil] forCellWithReuseIdentifier:@"Cell"];
@@ -56,14 +52,7 @@
 {
 	[super viewWillAppear:animated];
     
-	[self.navigationController setNavigationBarHidden:YES animated:_showNavigationBarWithAnimation];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-    
-	[self.navigationController setNavigationBarHidden:NO animated:YES];
+	[self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -188,11 +177,8 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    // navigationbar can be shown with animation.
-    _showNavigationBarWithAnimation = YES;
-    
     PhotoDetailViewController *detailView = [[PhotoDetailViewController alloc] initWithNibName:@"PhotoDetailViewController" bundle:nil];
-    [detailView setModel: [_data objectAtIndex:[indexPath row]]];
+    [detailView setModel:[_data objectAtIndex:[indexPath row]]];
     [[self navigationController] pushViewController:detailView animated:YES];
 }
 

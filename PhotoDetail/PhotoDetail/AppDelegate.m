@@ -25,7 +25,7 @@
     
     // Create navigationcontroller and this as rootviewvcontroller
     // this will add navigationbar functionality.
-    _navigationController = [[UINavigationController alloc]initWithRootViewController:_viewController];
+    _navigationController = [[UINavigationController alloc] initWithRootViewController:_viewController];
     _navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     self.window.rootViewController = _navigationController;
     [self.window makeKeyAndVisible];

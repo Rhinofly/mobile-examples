@@ -113,20 +113,18 @@
 		6190CA2B16B9689A007DCF49 /* PhotoDetail */ = {
 			isa = PBXGroup;
 			children = (
+				61CD7B3016DD07CD003F8B5C /* cells */,
 				61BC85B616D7CED4004F6494 /* utils */,
-				6141A7AF16B976CB00A6F747 /* PhotoGridCell.h */,
-				6141A7B016B976CB00A6F747 /* PhotoGridCell.m */,
-				6141A7B116B976CB00A6F747 /* PhotoGridCell.xib */,
+				61BC85B516D7CEB7004F6494 /* models */,
+				6190CA2C16B9689A007DCF49 /* Supporting Files */,
+				6190CA3416B9689A007DCF49 /* AppDelegate.h */,
+				6190CA3516B9689A007DCF49 /* AppDelegate.m */,
 				6141A7B216B976CB00A6F747 /* PhotoGridViewController.h */,
 				6141A7B316B976CB00A6F747 /* PhotoGridViewController.m */,
 				6141A7B416B976CB00A6F747 /* PhotoGridViewController.xib */,
 				6141A7BA16B9773900A6F747 /* PhotoDetailViewController.h */,
 				6141A7BB16B9773900A6F747 /* PhotoDetailViewController.m */,
 				6141A7BC16B9773900A6F747 /* PhotoDetailViewController.xib */,
-				6190CA3416B9689A007DCF49 /* AppDelegate.h */,
-				6190CA3516B9689A007DCF49 /* AppDelegate.m */,
-				61BC85B516D7CEB7004F6494 /* models */,
-				6190CA2C16B9689A007DCF49 /* Supporting Files */,
 			);
 			path = PhotoDetail;
 			sourceTree = "<group>";
@@ -167,6 +165,16 @@
 				614ECF2116DB6D2100CD1240 /* ImageLoader.m */,
 			);
 			name = utils;
+			sourceTree = "<group>";
+		};
+		61CD7B3016DD07CD003F8B5C /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				6141A7AF16B976CB00A6F747 /* PhotoGridCell.h */,
+				6141A7B016B976CB00A6F747 /* PhotoGridCell.m */,
+				6141A7B116B976CB00A6F747 /* PhotoGridCell.xib */,
+			);
+			name = cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

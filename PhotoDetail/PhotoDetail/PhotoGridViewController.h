@@ -12,9 +12,6 @@
 @interface PhotoGridViewController : UICollectionViewController <UIScrollViewDelegate, ImageLoaderDelegate>
 
 @property (nonatomic) NSArray *data;
-
 @property (nonatomic) NSMutableDictionary *thumbLoaders;
-
-@property (nonatomic) BOOL *showNavigationBarWithAnimation;
 
 @end
