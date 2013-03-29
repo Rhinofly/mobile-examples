@@ -18,8 +18,6 @@
 
 - (void)start:(NSString *)url withData:(NSObject *)data;
 {
-    NSLog(@"start");
-    
     _url = url;
     
     // check if object is valid for json serialization.
@@ -47,9 +45,7 @@
 }
 
 - (void)cancel
-{
-    NSLog(@"cancel");
-    
+{    
     [_urlConnection cancel];
     _urlConnection = nil;
     _url = nil;
@@ -58,9 +54,8 @@
 
 - (void)handleError:(NSError *)error
 {
-    NSString *errorMessage = [error localizedDescription];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Fout opgetreden"
-														message:errorMessage
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[error localizedDescription]
+														message:[error localizedRecoverySuggestion]
 													   delegate:nil
 											  cancelButtonTitle:@"OK"
 											  otherButtonTitles:nil];
@@ -69,15 +64,12 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-    NSLog(@"didReceiveData");
     // save data for returning.
     _data = data;
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-    NSLog(@"didFailWithError");
-    
 	// Clear the activeDownload property to allow later attempts
     _data = nil;
     
@@ -103,7 +95,6 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    NSLog(@"connectionDidFinishLoading");
     // Release the connection now that it's finished
     _urlConnection = nil;
     
