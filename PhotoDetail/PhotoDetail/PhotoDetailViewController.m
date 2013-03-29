@@ -62,7 +62,6 @@
     
     if (image)
     {
-        NSLog(@"got image: %@", image);
         _imageView.image = image;
     }
 }
